@@ -32,5 +32,4 @@ def load_umidade_data(csv_file_path):
     print("Fim da importação:", datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
     print(f"Dados carregados com sucesso de {csv_file_path}")
 
-
 load_umidade_data('dados/umidade_data.csv')

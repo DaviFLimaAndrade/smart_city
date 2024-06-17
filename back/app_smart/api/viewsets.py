@@ -10,6 +10,8 @@ from rest_framework.views import APIView
 from django.db.models import Q
 from rest_framework.response import Response
 
+
+
 class CreateUserAPIViewSet(generics.CreateAPIView):
     queryset = User.objects.all()
     serializer_class = serializer.UserSerializer
@@ -25,6 +27,7 @@ class SensorViewSet(viewsets.ModelViewSet):
     permission_class = [permissions.IsAuthenticated]
     filter_backends = [DjangoFilterBackend]
     filterset_class = SensorFilter
+    
     
 class SensorFilterView(APIView):
     # permission_classes = [permissions.IsAuthenticated]
